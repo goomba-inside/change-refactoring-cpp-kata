@@ -1,8 +1,8 @@
-# Bootstrap for C++ katas
+# Change refactoring kata in C++
 
 ## Overview
 
-This is a bootstrap repository for clean code katas in C++17.
+This is a "change" refactoring kata in C++17.
 
 ## Usage
 

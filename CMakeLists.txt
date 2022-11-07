@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.19)
-project(bootstrap-cpp-kata CXX)
+project(change-refactoring-cpp-kata CXX)
 enable_testing()
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
@@ -7,9 +7,10 @@ set(CMAKE_CXX_COMPILER "clang++")
 
 find_package(GTest)
 
-add_executable(test_something test_something.cpp)
-add_test(test_something test_something)
-target_link_libraries(test_something PRIVATE GTest::gmock GTest::gmock_main)
+add_executable(test_change test_change.cpp)
+add_test(test_change test_change)
+target_include_directories(test_change PRIVATE .)
+target_link_libraries(test_change PRIVATE GTest::gmock GTest::gmock_main)
 
 add_custom_target(
 	  copy-compile-commands ALL

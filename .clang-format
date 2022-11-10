@@ -19,6 +19,5 @@ IndentCaseLabels: false
 IndentWidth: 4
 KeepEmptyLinesAtTheStartOfBlocks: false
 PointerAlignment: Left
-SortIncludes: false
 SpaceAfterCStyleCast: true
 # vim: ft=yaml

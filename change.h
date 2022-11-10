@@ -1,5 +1,6 @@
 #pragma once
 
+#include <cstdlib>
 #include <vector>
 
 class ChangeItForMe {
@@ -18,10 +19,9 @@ public:
             q += 1;
         }
 
-        int dd;
         auto dv = std::div(tender, 10);
-        dd = dv.quot;
-        tender = dv.rem;
+        int  dd = dv.quot;
+        tender  = dv.rem;
 
         int n = tender / 5;
         if (n > 0)
@@ -32,6 +32,7 @@ public:
 
     std::vector<int> calculate(int amount)
     {
+        // Calculate transaction
         return transact(0, amount);
     }
 };

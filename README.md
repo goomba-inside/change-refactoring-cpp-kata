@@ -1,8 +1,13 @@
 # Change refactoring kata in C++
 
+[![Run on Repl.it](https://replit.com/badge/github/megabyde/change-refactoring-cpp-kata)](https://replit.com/new/github/megabyde/change-refactoring-cpp-kata)
+
 ## Overview
 
-This is a "change" refactoring kata in C++17.
+This kata complements [Clean Code: Fundamentals, Episode 2 - Names++](https://cleancoders.com/episode/clean-code-episode-2).
+The goal of this kata is to refactor the `ChangeItForMe` class
+methods for better naming and readability. You cannot change the signatures
+of the class methods or tests.
 
 ## Usage
 

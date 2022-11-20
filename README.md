@@ -1,6 +1,6 @@
 # Change refactoring kata in C++
 
-[![Run on Repl.it](https://replit.com/badge/github/megabyde/change-refactoring-cpp-kata)](https://replit.com/new/github/megabyde/change-refactoring-cpp-kata)
+[![Run on Repl.it](https://replit.com/badge/github/Coding-Cuddles/change-refactoring-cpp-kata)](https://replit.com/new/github/Coding-Cuddles/change-refactoring-cpp-kata)
 
 ## Overview
 

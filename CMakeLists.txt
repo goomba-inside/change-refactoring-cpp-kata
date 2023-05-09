@@ -6,12 +6,17 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_INCLUDE_DIRECTORIES ${CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES})
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-find_package(GTest)
+find_package(GTest REQUIRED)
 
-add_executable(test_change test_change.cpp)
-add_test(test_change test_change)
-target_include_directories(test_change PRIVATE .)
-target_link_libraries(test_change PRIVATE GTest::gmock GTest::gmock_main)
+add_executable(main main.cpp)
+
+file(GLOB tests test_*.cpp)
+foreach(test ${tests})
+    get_filename_component(name ${test} NAME_WE)
+    add_executable(${name} ${test})
+    add_test(${name} ${name})
+    target_link_libraries(${name} PRIVATE GTest::gmock GTest::gmock_main)
+endforeach()
 
 add_custom_target(  
     copy-compile-commands ALL

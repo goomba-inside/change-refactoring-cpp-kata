@@ -1,11 +1,10 @@
 #pragma once
 
-#include <cstdlib>
 #include <vector>
 
 class ChangeItForMe {
 public:
-    std::vector<int> transact(int cost, int tender)
+    static std::vector<int> transact(const int cost, int tender)
     {
         tender = tender - cost;
 
@@ -19,9 +18,8 @@ public:
             q += 1;
         }
 
-        auto dv = std::div(tender, 10);
-        int  dd = dv.quot;
-        tender  = dv.rem;
+        auto [dd, rem] = std::div(tender, 10);
+        tender         = rem;
 
         int n = tender / 5;
         if (n > 0)
@@ -30,7 +28,7 @@ public:
         return {tender, n, dd, q, d};
     }
 
-    std::vector<int> calculate(int amount)
+    static std::vector<int> calculate(const int amount)
     {
         // Calculate transaction
         return transact(0, amount);
